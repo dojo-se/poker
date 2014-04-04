@@ -42,6 +42,6 @@ Desenvolva um programa que, de acordo com as mãos de dois jogadores, informe qu
 
 [Faltam muitas regras a serem implementadas](https://github.com/dojo-se/poker/issues/1). Sinta-se à vontade para contribuir com a solução!
 
-#Soluções da comunidade:
+###Soluções da comunidade:
 - @robertobrandini https://github.com/dojo-se/pokerMapReduce
 - @lucasxas https://github.com/dojo-se/poker-java
