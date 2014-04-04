@@ -32,6 +32,16 @@ def temPar(mao):
 				return True
 
 	return False
+def temTrinca(mao):
+	for carta1 in mao:
+		for carta2 in mao:
+			for carta3 in mao:
+				if getCarta(carta1) == getCarta(carta2) and \
+					getCarta(carta2) == getCarta(carta3) and \
+					carta1 != carta2 and carta1 != carta3 and carta2 != carta3:
+					return True
+
+	return False
 
 def getCarta(carta):
 	return dicCartas[carta[0]]
@@ -50,7 +60,17 @@ class PokerTest(unittest.TestCase):
 									['2C','5C','7D','8S','8H']))
 
 	def test_um_par(self):
-		self.assertEqual(True, temPar(['8D','8C','9S','JS','AC']))
+		self.assertEqual(True, temPar(['8D','QC','7S','JS','8C']))
+
+	def test_nao_tem_um_par(self):
+		self.assertEqual(False, temPar(['5D','8C','9S','JS','AC']))
+
+	def test_uma_trinca(self):
+		self.assertEqual(True, temPar(['8D','QC','8S','JS','8C']))
+
+	def test_nao_tem_uma_trinca(self):
+		self.assertEqual(False, temPar(['5D','8C','9S','JS','AC']))
+
 
 if __name__ == '__main__':
     unittest.main()
